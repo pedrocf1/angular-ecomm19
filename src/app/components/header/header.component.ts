@@ -5,16 +5,14 @@ import { PrimaryButtonComponent } from "../primary-button/primary-button.compone
   selector: 'app-header',
   imports: [PrimaryButtonComponent],
   template: `
-    <div class="bg-slate-100 px-4 py-3 shadow-md flex justify-between">
-      <span> STORE</span>
-      <app-primary-button [label]="cart()" (btnClicked)="showButtonClicked()" />
+    <div class="bg-slate-100 px-4 py-3 shadow-md flex justify-between items-center">
+      <p class="text-base">My STORE</p>
+      <app-primary-button label="cart" (btnClicked)="showButtonClicked()" />
     </div>
   `,
   styles: ``
 })
 export class HeaderComponent {
-
-  cart = signal('cart');
 
   showButtonClicked() {
     console.log("clicked")
